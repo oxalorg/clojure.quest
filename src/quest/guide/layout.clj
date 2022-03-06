@@ -49,7 +49,7 @@
      [:link {:href "/css/global.css" :rel "stylesheet"}]
 
      (if (io/resource "public/ui/main.css")
-       [:link {:rel "stylesheet" :href "/ui/main.css"}]
+       [:link {:rel "stylesheet" :href (str "/ui/main.css/?v=" (System/currentTimeMillis))}]
        [:style {:type "text/css" :id "ornament"}
         (o/defined-styles {:preflight? true})])
      head]
