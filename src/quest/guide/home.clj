@@ -25,20 +25,42 @@
   ([]
    [:div]))
 
+(defstyled newsletter :div
+  :mx-auto :mt-8
+  :font-fancy-bold
+  :max-w-xl :p-8
+  :border-2 :border-teal-400 :rounded-lg
+  [:>form
+   [:p :text-2xl]
+   [:label :text-lg :mt-4 :block :text-teal-400]
+   [:input :mr-4 :mt-4 :p-2 :w-64 :text-fuchsia-600 :rounded-lg]
+   [:button :border-2 :border-teal-400 :p-2 :rounded-lg]]
+  ([]
+   [:form {:action "https://tinyletter.com/oxalorg" :method "post"}
+    [:p "Quest updates"]
+    [:label {:for "newsletter"} "3 line emails only. No more. Read within 9.17 seconds or my character dies!"]
+    [:div {:class "relative flex items-center max-w-xs"}
+     [:input#newsletter
+      {:placeholder "Your email"
+       :name "email"
+       :type "email"}]
+     [:button
+      {:aria-label "Subscribe" :type "submit"}
+      "Subscribe"]]]))
+
 (defstyled header :header
   :text-center :font-fancy :text-white :bg-black
   :p-4
   [:>h2 :text-6xl :mt-8 :font-fancy-bold]
   [:>.desc :mt-8 :max-w-lg :mx-auto :leading-relaxed :text-gray-400
    [:>span :mt-4 :block]]
-  [:>.start :text-emerald-400 :text-2xl :mt-16 :font-fancy-bold]
+  [:>.start :text-gray-400 :text-2xl :mt-8 :font-fancy-bold]
   [:>.repo
-   :mt-4
+   :mt-2
    :text-gray-400
-   [:>a :text-amber-500]
-   ]
+   [:>a :text-amber-500]]
   [:>.love
-   :mt-32
+   :mt-8
    [:>img :w-4 :h-4 :inline]
    [:>a :text-rose-400]]
   ([]
@@ -52,10 +74,12 @@
      [:span "Start your quest here to follow the paths of Clojure and find the one true paren!"]]
 
     [:div.start
-     [:a {:href "#"} "JOURNEY UNDER CONSTRUCTION!"]]
+     [:a {:href "#"} "Our wizards are reifying the quests! Stay tuned"]]
 
     [:p.repo "REPL potions being brewed at "
      [:a {:href "https://github.com/oxalorg/clojure.quest"} "github.com/oxalorg/clojure.quest"]]
+
+    [newsletter]
 
     [:p.love "Made with "
      [:img {:src (utils/img "icons/heart.png")}]
