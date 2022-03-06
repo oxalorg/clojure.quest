@@ -11,7 +11,7 @@ build:
 	npx shadow-cljs release main
 	clojure -X:freeze
 	cp -r resources/public/* _site/
-	cp resources/.nojekyll _site/
+	touch _site/.nojekyll
 	cp CNAME _site/
 
 build-action: setup build

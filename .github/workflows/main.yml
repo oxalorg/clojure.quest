@@ -19,7 +19,17 @@ jobs:
       - name: Setup clojure
         uses: DeLaGuardo/setup-clojure@master
         with:
-          cli: '1.10.1.763'
+          cli: '1.10.3.943'
+          
+      - name: maven cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.m2
+            ~/.gitlibs
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/deps.edn') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
 
       - name: Run clj build
         run: make build-action
