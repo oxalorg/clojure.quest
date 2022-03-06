@@ -123,8 +123,9 @@ I’m Mitesh (internet handle @oxalorg) and I love writing, documentation, and
 have an unhealthy obsession with recording my screen all the time (I have a TB
 worth of recordings never published!!).
 
-I create Clojure[script] screencasts on my YouTube channel, do a lot of OSS
-work, and was also recently funded by ClojuristsTogether for building v2 of the
+I create Clojure[script] screencasts on my [YouTube
+channel](https://youtube.com/c/oxalorg), do a lot of OSS work, and was also
+recently funded by ClojuristsTogether for building v2 of the
 clojurians log app.
 
 Reach me at [Twitter](https://twitter.com/oxalorg) or in Clojurians slack
