@@ -93,6 +93,9 @@ a Clojure company who is finding ways to train your new hires or existing
 employees, then please start a conversation with me (@oxalorg everywhere or
 mitesh@miteshshah.com)
 
+But creating content is hard ☠️. Be it blog posts or screencasts! Most videos I
+create take me anywhere between 10-100 hours for 15 minutes worth of content.
+
 Ideally I want to find a way to monetise this in a sustainable way, if you have
 ideas I would love to have a chat with you! Until I figure this out, all content
 WILL BE FREE.
@@ -157,7 +160,7 @@ With Emacs, `cider-jack-in-clj&cljs` should get you up and running.
 Using this command, two REPL’s should open: one for ClojureScript and
 one for Clojure. At the Clojure dedicated REPL, in the `user`
 namespace (the default), run `(go)` to serve the project locally on
-http://localhost:7070
+http://localhost:1234
 
 After that, either navigate to that address manually or evaluate
 `(browse)` in the same namespace (`user`) to open the page in your
