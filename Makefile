@@ -9,7 +9,7 @@ setup:
 build:
 	rm -rf _site
 	npx shadow-cljs release main
-	clj -X:build
+	clj -X:freeze
 	cp -r resources/public/* _site/
 	cp resources/.nojekyll _site/
 	cp CNAME _site/

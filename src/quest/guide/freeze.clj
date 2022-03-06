@@ -4,7 +4,7 @@
             [lambdaisland.reitit-jaatya.freeze :as freeze]
             [quest.guide.http :as http]))
 
-(defn build [&]
+(defn build [& args]
   (let [css-file "resources/public/ui/main.css"]
     (io/make-parents css-file)
     (spit css-file (ornament/defined-styles {:preflight? true})))
