@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'bitoperator-bold';
+  src: url('/fonts/8bitOperatorPlus-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'bitoperator-regular';
+  src: url('/fonts/8bitOperatorPlus-Regular.ttf');
+}

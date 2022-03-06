@@ -8,4 +8,4 @@
    string))
 
 (defn img [path]
-  (str "/assets/imgs/" path))
+  (str "/imgs/" path))

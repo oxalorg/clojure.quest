@@ -3,7 +3,9 @@
             [clojure.data.json :as json]
             [lambdaisland.ornament :as o]))
 
-(o/set-tokens! {:fonts {:primary "Atkinson Hyperlegible,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"}})
+(o/set-tokens! {:fonts {:primary "Atkinson Hyperlegible,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"
+                        :fancy "bitoperator-regular"
+                        :fancy-bold "bitoperator-bold"}})
 
 (defn get-script-name
   "Read the manifest.edn file, and get the current main.HASHCODE.js filename
@@ -44,6 +46,7 @@
      [:link {:rel "preconnect" :href "https://fonts.googleapis.com"}]
      [:link {:rel "preconnect" :href "https://fonts.gstatic.com"}]
      [:link {:href "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" :rel "stylesheet"}]
+     [:link {:href "/css/global.css" :rel "stylesheet"}]
 
      (if (io/resource "public/ui/main.css")
        [:link {:rel "stylesheet" :href "/ui/main.css"}]
