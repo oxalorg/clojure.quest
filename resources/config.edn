@@ -1,0 +1,3 @@
+{:quest.guide.http/server
+ {:port 1234
+  :rebuild-on-request? #profile {:default true :prod false}}}
