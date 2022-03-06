@@ -55,22 +55,23 @@ Clojure world.
 
 Yes. Quests are scenarios you need to overcome.
 
-Example quest: You have just joined $DEFN company. On your first day you get
-access to their Clojure backend code and you notice there is no `project.clj`
-file. Oh noes! They are using the new fancy kid on the block - tools.deps. You
-open up the `deps.edn` file but are totally confused. You go on a quest to
-figure this out!
+Example quests:
+> You have just joined $DEFN company. On your first day you get access to their
+> Clojure backend code and you notice there is no `project.clj` file. Oh noes!
+> They are using the new fancy kid on the block - tools.deps. You open up the
+> `deps.edn` file but are totally confused. You go on a quest to figure this
+> out!
 
-Example quest: You have just quit your job and want to start a SaaS company. You
-want to make it big and get $5 trillion in VC funding. You go on a quest to
-build a Clojure SaaS app with graphql / lacinia, re-frame, and XTDB.
+> You have just quit your job and want to start a SaaS company. You want to make
+> it big and get $5 trillion in VC funding. You go on a quest to build a Clojure
+> SaaS app with graphql / lacinia, re-frame, and XTDB.
 
-Example quest: After lots of hard work you managed to deploy a web app in
-Clojure. But every time you change a few lines of code you hear a trembling
-voice echoing from deep within your mind ~~~~~“this might break”~~~~~~ but you
-push the code anyways. One day you’ve had enough. You want to conquer over your
-fears and sleep well at night. You decide to go on a quest to learn to write
-integration tests for your web service.
+> After lots of hard work you managed to deploy a web app in Clojure. But every
+> time you change a few lines of code you hear a trembling voice echoing from
+> deep within your mind ~~~~~“this might break”~~~~~~ but you push the code
+> anyways. One day you’ve had enough. You want to conquer over your fears and
+> sleep well at night. You decide to go on a quest to learn to write integration
+> tests for your web service.
 
 Once we have a bunch of quests, there will be a larger story at play. Each quest
 will have a “pre-requisite” quest to have completed, and a sequel quest to
