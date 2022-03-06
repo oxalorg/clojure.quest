@@ -60,7 +60,7 @@
     [:p.love "Made with "
      [:img {:src (utils/img "icons/heart.png")}]
      " by "
-     [:a {:href "https://github.com/oxalorg"} "@oxalorg"]]
+     [:a {:href "https://twitter.com/oxalorg"} "@oxalorg"]]
 
     ]))
 
