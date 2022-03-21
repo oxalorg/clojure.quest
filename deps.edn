@@ -22,8 +22,9 @@
   ring/ring-jetty-adapter     {:mvn/version "1.9.0"}
 
   ;; HTTP / CSS (Server-side)
+  com.lambdaisland/hiccup {:mvn/version "0.0.4"}
   lambdaisland/webstuff {:git/url "https://github.com/lambdaisland/webstuff"
-                         :sha     "3d08d43fea1ef3c9cfbe7ceee88b53aaf3aae3a7"}
+                         :git/sha "63b739b304a3c462b6779ab6f90538b0c7612445"}
   com.lambdaisland/ornament {:mvn/version "0.4.34"}
 
 
@@ -44,7 +45,7 @@
  :aliases
  {:dev
   {:extra-paths ["dev"]
-   :extra-deps  {thheller/shadow-cljs {:mvn/version "2.14.2"}
+   :extra-deps  {thheller/shadow-cljs {:mvn/version "2.17.8"}
                  djblue/portal        {:mvn/version "RELEASE"}}}
 
   :test

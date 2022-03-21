@@ -17,7 +17,7 @@
   []
   (filter
    #(str/ends-with? (.getName %) ".md")
-   (file-seq (io/file (io/resource "content/posts")))))
+   (file-seq (io/file "content/journal"))))
 
 (defn- meta-markdown [input]
   (let [output (new StringWriter)
@@ -28,14 +28,14 @@
                metadata)]
     {:meta meta :html html}))
 
-(defn- get-posts []
+(defn- get-journal-entries []
   (into {}
         (comp
          (map meta-markdown)
          (map (juxt #(get-in % [:meta :slug]) identity)))
         (get-content-files)))
 
-(def posts (delay (get-posts)))
+(def journal-entries (delay (get-journal-entries)))
 
 (def story
   (delay

@@ -1,7 +1,8 @@
 (ns quest.guide.layout
   (:require [clojure.java.io :as io]
             [clojure.data.json :as json]
-            [lambdaisland.ornament :as o]))
+            [quest.guide.utils :as utils]
+            [lambdaisland.ornament :as o :refer [defstyled]]))
 
 (o/set-tokens! {:fonts {:primary "Atkinson Hyperlegible,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"
                         :fancy "bitoperator-regular"
@@ -18,10 +19,57 @@
            first
            :output-name))
 
-(o/defstyled app :div
+(defstyled ground :div
+  :h-8
+  :w-full
+  :bg-gradient-to-b
+  :from-rgb-560d37
+  :to-black
+  ([]
+   [:div]))
+
+(defstyled sky :div
+  :h-8
+  :w-full
+  :bg-gradient-to-t
+  :from-rgb-020034
+  :to-black
+  ([]
+   [:div]))
+
+(defstyled footer :footer
+  :pt-8
+  :text-center :font-fancy :text-white :bg-black
+  [:>.love
+   [:>img :w-4 :h-4 :inline]
+   [:>a :text-rose-400]]
+  ([]
+   [:<>
+    [:p.love "Made with "
+     [:img {:src (utils/img "icons/heart.png")}]
+     " by "
+     [:a {:href "https://twitter.com/oxalorg"} "@oxalorg"]]
+    [sky]
+    [ground]]))
+
+(defstyled app :div
   :font-primary
   ([body]
    body))
+
+(defstyled page :div
+  [:>main :md:container :mx-auto]
+  ([children]
+   [:<>
+    [:main
+     children]
+    [footer]]))
+
+(defstyled page-fluid :div
+  ([children]
+   [:<>
+    children
+    [footer]]))
 
 (defn layout
   ([body]

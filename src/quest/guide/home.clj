@@ -7,24 +7,6 @@
   ([]
    [:image {:src (utils/img "banner.jpg")}]))
 
-(defstyled ground :div
-  :h-8
-  :w-full
-  :bg-gradient-to-b
-  :from-rgb-560d37
-  :to-black
-  ([]
-   [:div]))
-
-(defstyled sky :div
-  :h-8
-  :w-full
-  :bg-gradient-to-t
-  :from-rgb-020034
-  :to-black
-  ([]
-   [:div]))
-
 (defstyled newsletter :div
   :mx-auto :mt-8
   :font-fancy-bold
@@ -48,7 +30,7 @@
       {:aria-label "Subscribe" :type "submit"}
       "Subscribe"]]]))
 
-(defstyled header :header
+(defstyled main :main
   :text-center :font-fancy :text-white :bg-black
   :p-4
   [:>h2 :text-6xl :mt-8 :font-fancy-bold]
@@ -59,11 +41,7 @@
    :mt-2
    :text-gray-400
    [:>a :text-amber-500]]
-  [:>.love
-   :mt-8
-   [:>img :w-4 :h-4 :inline]
-   [:>a :text-rose-400]]
-  ([]
+  ([_]
    [:<>
     [:h2 "Clojure Quest"]
     [:p.desc
@@ -81,16 +59,6 @@
 
     [newsletter]
 
-    [:p.love "Made with "
-     [:img {:src (utils/img "icons/heart.png")}]
-     " by "
-     [:a {:href "https://twitter.com/oxalorg"} "@oxalorg"]]
+
 
     ]))
-
-(defn page [{:keys []}]
-  [:div
-   [header]
-   [sky]
-   #_[banner]
-   [ground]])
